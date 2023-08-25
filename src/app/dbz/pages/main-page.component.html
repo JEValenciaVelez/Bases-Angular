@@ -1,0 +1,18 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <!-- el componente dbz-list toma una propiedad ondelete que es emitida dentro de si y le entrega el evento  al metodo onDeleteCharacter definido en su clase que es propio de este componente padre mainPage-->
+    <!-- el componente dbz-list recibe del padre la propiedad characterList que es un arreglo de objetos y se lo asigna a la su propiedad charcters definida en su clase -->
+  <dbz-list  (onDelete)="onDeleteCharacter($event)" [characterLIst]="characters"/>
+
+  </div>
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"/>
+
+  </div>
+</div>
+-
